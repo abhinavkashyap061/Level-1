@@ -23,19 +23,25 @@ int main(){
     cin>>test_cases;
     while(test_cases--){
 
-        int l,r;
+        ll l,r;
         cin>>l>>r;
 
-        ll sum=0;
+        // to prevent negative sum
+        if( l>r ){
 
-        while(l<=r){
-
-            sum+=l;
-
-            l++;
+            ll temp = l;
+            l = r;
+            r = temp;
         }
 
-        cout<<sum<<endl;
+        // sum of first l natural numbers
+        ll sum1 = (l*(l+1))/2;
+
+        // sum of first r natural numbers
+        ll sum2 = (r*(r+1))/2;
+
+        // l is inclusive
+        cout<<sum2-sum1+l<<endl;
     }
 
 	return 0;

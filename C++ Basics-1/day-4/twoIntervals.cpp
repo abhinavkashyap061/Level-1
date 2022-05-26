@@ -22,46 +22,21 @@ int main()
     ll l1, r1, l2, r2;
     cin >> l1 >> r1 >> l2 >> r2;
 
-    // l1<=r1 | l2<=r2
+    // l1, l2 are the lower bounds
+    // r1, r2 are upper bounds
 
-    if ((l1 < l2 && l1 < r2) && (r1 < l2 && r1 < r2))
-    {
-        cout << -1 << endl;
-    }
-    else if (l1 <= l2)
-    {
 
-        if (r1 < r2 && r1 < l2)
-        {
+    int p2 = max(l1,l2);// starting point of the common interval
+    int p1 = min(r1,r2);// end point of common interval
 
-            cout << -1 << endl;
-        }
-        else if (r1 >= l2 && r1 < r2)
-        {
-            cout << l2 << " " << r1 << endl;
-        }
-        else if (r2 <= r1)
-        {
-            cout << l2 << " " << r2 << endl;
-        }
-        else
-        {
-            cout << -1 << endl;
-        }
-    }
-    else if(l1>l2){
-        if(r1<=r2){
-            cout<<l1<<" "<<r1<<endl;
-        }else if(r2<r1 && r2<l1){
-            cout<<l1<<" "<<r2<<endl;
-        }else{
-            cout<<-1<<endl;
-        }
-    }
+    if(p1<p2){// if no common interval -> starting > end point
 
-    else if (l1 == r1 && l1 == l2 && l1 == r2)
-    {
-        cout << l1 << " " << r1 << endl;
+        cout<<-1<<endl;
+
+    }else {
+
+        cout<<p2<<" "<<p1<<endl;
+
     }
 
     return 0;
