@@ -22,14 +22,34 @@ int main(){
     int m,n;
 	cin>>m>>n;
 
-	int temp=n;
+	// board of M x N squares
+	// given -> unlimited no. of 2x1 squares
+	// allowed to rotate the pieces
 
-	if( m*2>=temp ){
-		cout<<temp<<endl;
-	}else{
-		temp--;
-		goto start;
+	// each domino covers two squares
+	// no two dominos overlap
+	// inside the borad, can overlap
+
+	int count=0;
+
+	if( m<n ){
+
+		count = m*2;
+
+		
+
+	}else if( m>=n ){
+
+		count = n;
+
+		if( m%count==1 || m==n ){
+			count++;
+		}
 	}
+
+		
+	cout<<count<<endl;
+	
 
 
 	return 0;
