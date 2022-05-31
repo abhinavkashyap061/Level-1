@@ -22,7 +22,10 @@ int main(){
     ll a,b,c,d;
     cin>>a>>b>>c>>d;
 
-    ( pow(a, b)>pow(c, d) )?cout<<"YES"<<endl:cout<<"NO"<<endl;
+    // a**b or c**d would be too large to fit in any data type... so we will take b log(a) and c log(d) to compare
+    // there size would easily fit...
+
+    ( b*log(a)>d*log(c) )?cout<<"YES"<<endl:cout<<"NO"<<endl;
 
 	return 0;
 }
