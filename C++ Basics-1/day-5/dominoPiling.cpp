@@ -8,7 +8,6 @@ Problem link: https://codeforces.com/problemset/problem/50/A
 
 */
 
-
 #include <bits/stdc++.h>
 
 #define ll long long
@@ -18,13 +17,14 @@ Problem link: https://codeforces.com/problemset/problem/50/A
 
 using namespace std;
 
-int main(){
+int main()
+{
 
 	ios::sync_with_stdio(false);
-    cin.tie(NULL);
+	cin.tie(NULL);
 
-    int m,n;
-	cin>>m>>n;
+	int m, n;
+	cin >> m >> n;
 
 	/*
 
@@ -35,9 +35,9 @@ int main(){
 	- each domino covers two squares
 	- no two dominos overlap inside the borad, can overlap
 
-	(2x1)x + (1x2)y<=nm
- 	2x+2y <=(nm)
-	x+y<=(nm)/2
+	(2x1)x + (1x2)y <= nm
+	2x + 2y <= (nm)
+	x + y <= (nm)/2
 	x is 2x1 tiles
 	y is 1 x2 tiles
 
@@ -47,12 +47,9 @@ int main(){
 
 	*/
 
-	int count = (m*n)/2;
+	int count = (m * n) / 2;
 
-		
-	cout<<count<<endl;
-	
-
+	cout << count << endl;
 
 	return 0;
 }
