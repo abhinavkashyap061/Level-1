@@ -32,7 +32,7 @@ int main()
         ll n;
         cin>>n;
 
-        for( int k=3; k<29; k++ ){
+        for( int k=3; k<31; k++ ){
 
             ll sum = pow(2, k-1) - 1;
 
