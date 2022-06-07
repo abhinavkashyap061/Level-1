@@ -18,14 +18,10 @@ Problem link: https://www.hackerrank.com/challenges/summing-the-n-series/problem
 
 int summingSeries(long n) {
     
-    long long i = 1000000007;
+    int i = 1000000007;
     
-    long long res = (n%i)*(n%i);
+    int res = ((n%i)*(n%i))%i;
     
-    
-    
-    res = res%i;
-    
-    return res;
+    return res; 
 
 }
