@@ -28,6 +28,30 @@ int main(){
     {
 
         // your code goes here
+
+        int n,k;
+        cin>>n>>k;
+
+        string s;
+        cin>>s;
+
+        int i=0, j = n - 1;
+
+        while( k-- ){
+
+            if( s[i]!=s[j] ){
+
+                cout<<"NO"<<endl;
+                break;
+            }
+
+            if( j-i>1 ){
+
+                cout<<"YES"<<endl;
+            }
+
+            cout<<"NO"<<endl;
+        }
     
     }
 

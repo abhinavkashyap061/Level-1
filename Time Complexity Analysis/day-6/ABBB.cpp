@@ -24,6 +24,37 @@ int32_t main(){
 
 	// your code goes here
 
+    int t;
+    cin>>t;
+    while(t--){
+
+        string t;
+        cin>>t;
+
+        int n = t.size();
+
+        stack<char> s;
+
+        for( int i=0; i<n; i++ ){
+
+            if( s.empty() ){
+
+                s.push( t[i] );
+            }else {
+
+                if( t[i]=='A' ){
+                    
+                    s.push( t[i] );
+                }else{
+
+                    s.pop();
+                }
+            }
+        }
+
+        cout<< s.size() <<endl;
+    }
+
     return 0;
 
 }
