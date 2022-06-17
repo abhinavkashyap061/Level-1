@@ -17,12 +17,29 @@ Problem link: https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/P
 
 using namespace std;
 
+int log2n( int n){
+
+    //base case
+    if( n<=1 ){
+        
+        return 0;
+    }
+
+    //compuation / recursive call
+    return 1 + log2n(n/2);
+}
+
 int32_t main(){
 
 	ios::sync_with_stdio(false);
     cin.tie(NULL);
 
 	// your code goes here
+
+    int n;
+    cin>>n;
+
+    cout<<log2n(n)<<endl;
 
     return 0;
 
