@@ -17,12 +17,36 @@ Problem link: https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/Q
 
 using namespace std;
 
+int sol(int n){
+
+    //base case
+    if( n<=2 ){
+
+        return n;
+    }
+
+    // sequence computation
+    if( n%2==0 ){
+
+        return 1+ sol(n/2);
+    }else{
+
+        return 1 + sol(3*n + 1);
+    }
+    
+}
+
 int32_t main(){
 
 	ios::sync_with_stdio(false);
     cin.tie(NULL);
 
 	// your code goes here
+
+    int n;
+    cin>>n;
+
+    cout<<sol(n)<<endl;
 
     return 0;
 
